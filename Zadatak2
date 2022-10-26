@@ -1,0 +1,115 @@
+import * as React from 'react';
+import { 
+Text, 
+View, 
+StyleSheet, 
+Button, 
+Alert,
+Image 
+
+
+} from 'react-native';
+import Constants from 'expo-constants';
+
+// You can import from local files
+import AssetExample from './components/AssetExample';
+
+// or any pure javascript modules available in npm
+import { Card } from 'react-native-paper';
+
+export default function App() {
+  return (
+    <View style={styles.container}>
+    <View style={styles.header}>
+  <Text style={styles.naslov}>ZADATAK 2</Text>
+     </View>
+
+
+<View style={styles.jumbotron}>
+<View style={styles.left}>
+<Text>Left</Text>
+
+</View>
+
+<View style={styles.right}>
+<Text>Right</Text>
+
+</View>
+
+</View>
+
+  <Image
+        style={styles.tinyLogo}
+        source={{
+          uri: "https://reactnative.dev/img/tiny_logo.png",
+        }}
+      />
+      <Image style={styles.tinyLogo} source={require("./assets/favicon.png")} />
+
+
+<Button title="Button" onPress={()=> Alert.alert ("Button pressed")}/>
+
+    </View>
+  );
+}
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    paddingTop: 20,
+    backgroundColor: "#fdedec",
+    
+  },
+
+  naslov:{
+    color: "#CD6155",
+  borderBottomWidth: 10,
+    padding: 20,
+    textAlign :"center",
+    fontWeight: 'bold',
+    fontSize: 30,
+    
+
+  },
+  jumbotron:{
+    flexDirection: "row",
+    margin: 30,
+  },
+
+tinyLogo: {
+    margin: 20,
+    width: 100,
+    height: 100,
+    marginLeft: "auto",
+    marginRight: "auto",
+    width : 100
+
+    
+   
+    
+
+  },
+
+  left:{
+    backgroundColor: "#B03A2E",
+    padding: 20,
+    margin: 20,
+    borderBottomWidth: 20,
+    borderRadius: 20,
+    marginLeft: "auto",
+    marginRight: "auto"
+   
+  },
+  right:{
+    backgroundColor: "#EC7063",
+    padding: 20,
+    margin: 20,
+    borderBottomWidth: 20,
+    borderRadius: 20,
+    marginLeft: "auto",
+    marginRight: "auto"
+
+  },
+});
+
+ 
